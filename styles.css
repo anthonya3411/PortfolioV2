@@ -1,0 +1,210 @@
+
+
+#navList{
+    z-index: 5;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    min-height: 5%;  
+    list-style: none;
+    padding: 0;
+    filter: drop-shadow(0 2px 10px black) contrast(110%);
+    text-wrap: nowrap;
+    background: linear-gradient(-10deg, #222222 10%,#000000 100%);
+}
+
+#navItems{
+    margin-left: 15%;
+    margin: 0;
+    margin-top: .7%;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    gap: 5%;
+    list-style: none;
+}
+
+
+
+#introDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    gap: 25%;
+}
+
+#introText{
+   margin-top: 12.5%;
+   
+   animation: scaleIntroText 3.1s forwards ease-in-out, flashIntroText 3.7s forwards;
+}
+
+#continueButton{
+    font-size: 1.7em;
+    background: none;
+    border-radius: 5px;
+    border: white 2px solid;
+    padding: .05%;
+    padding-left: 1%;
+    padding-right: 1%;
+    min-height: fit-content;
+    max-height: 5%;
+    min-width: fit-content;
+    max-width: 10%;
+    animation: fadeIn 5s forwards;
+}
+
+#continueLink{
+    min-width: 100%;
+}
+
+
+
+
+
+
+
+
+/*AFTER THE INTRO PAGE*/
+
+#aboutDiv, #projectsDiv, #workshopDiv{
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aboutHeader, #projectsHeader, #workshopHeader, #projectName{
+    margin: 0;
+    font-size: 4em;
+    margin-top: 6%;
+}
+
+#projectName{
+    margin: 0;
+    font-size: 2em;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#galleryContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+#projOpaqLeft{
+    margin-right: -15%;
+    max-width: 20%;
+}
+
+#projectImage, #workshopImage{
+    max-width: 30%;
+}
+
+#projOpaqRight{
+    margin-left: -15%;
+    z-index: -1;
+    max-width: 20%;
+}
+
+#aboutText, #projectsText, #workshopText{
+    margin: 0;
+    max-width: 30%;
+    min-width: 30%;
+    line-height: 200%;
+    max-height: 10%;
+    text-align: center;
+}
+
+#projectButtonLeft, #projectButtonRight, #workshopButtonLeft,  #workshopButtonRight{
+    font-size: 5em;
+    background: #222222;
+    border-radius: 5px;
+    border: none;
+    padding: .2%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+
+
+
+#projectButtonLeft, #workshopButtonLeft{
+    margin-right: 1%;
+}
+
+#projectButtonRight, #workshopButtonRight{
+    margin-left: 1%;
+}
+
+
+@keyframes rotBG{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+@keyframes animateBackground{
+    0%{background-position:  0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+
+@keyframes scaleIntroText {
+    0%{transform: scale(2)}
+    90%{transform: scale(3.5);}
+    92%{transform: scale(2.8)}
+    95%{transform: scale(3.2);}
+    97%{transform: scale(2.9)}
+    99%{transform: scale(3.1);}
+    100%{transform: scale(3);}
+}
+
+@keyframes screenShake {
+    0% {transform: translate(0, 0) rotate(0deg);  }
+    92%{transform: translate(0, 0) rotate(0deg);}
+    94% { transform: translate(5px, 5px) rotate(5deg); }
+    98% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes flashIntroText{
+    0%{color: white;}
+    89%{color:white;}
+    90%{color:#333333;}
+    94%{color:#333333;}
+    95%{color:white;}
+    96%{color:white;}
+    97%{color:#333333;}
+    98%{color:#333333;}
+    99%{color: white;text-shadow: none;}
+    100%{color: white;text-shadow: #777777 1px 0 10px;}
+
+    /*88%{color: #333333;}
+    88%{color: #333333;}
+    89%{color: white;}
+    92%{color: white;}
+    93%{color: #333333;}
+    95%{color: #333333;}
+    96%{color: white;}
+    99%{color: white;filter: none;}
+    100%{color: white;filter: drop-shadow(0 2px 10px white) contrast(110%)}*/
+}
+
+@keyframes fadeIn 
+{
+    0% {opacity:0;}
+    75%{opacity: 0;}
+    100% {opacity:1;}
+}
+
+@keyframes gradualGlow{
+    0%{filter: none;}
+    100%{filter: drop-shadow(0 2px 10px white) contrast(110%);}
+}
+

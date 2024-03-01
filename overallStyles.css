@@ -1,0 +1,39 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /*animation: screenShake 3.1s forwards;*/
+}
+
+/*Specifying all text elements (color, font, etc.)*/
+h1, h2, p, ul, button, a{
+    font-family: "Staatliches", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+p, h2, h3{
+    filter: drop-shadow(0 2px 10px black) contrast(110%);
+}
+
+
+img{
+    aspect-ratio: 16 9;
+    max-width: 30%;
+}
+
+button:hover{
+    animation: gradualGlow 1s forwards;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    background: linear-gradient(-45deg, #333333 10%,#111111 100%);
+    background-size: 400% 400%;
+    animation: animateBackground 10s infinite ease-in-out;
+}

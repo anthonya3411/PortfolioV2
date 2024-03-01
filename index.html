@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <link  href="overallStyles.css" rel="stylesheet">
+    <link  href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <nav id="navList">
+        <ul id="navItems">
+            <li><a href="#aboutDiv">About Me</a></li>
+            <li><a href="#projectsDiv">Completed Projects</a></li>
+            <li><a href="#workshopDiv">The Workshop</a></li>
+        </ul>
+    </nav>
+    
+    <div id="introDiv">
+        <h1 id="introText"></h1>
+        <button id="continueButton"><a href="#aboutDiv">Continue Down</a></button>
+    </div>
+
+    <div id="aboutDiv">
+        <h2 id="aboutHeader">Name</h1>
+        <p id="aboutText"></p>
+        <img src="images/lidarVR.png">
+    </div>
+
+    <div id="projectsDiv">
+        <h2 id="projectsHeader">Completed Projects</h1>
+        <h2 id="projectName"></h1>
+            <div id="galleryContainer">
+                <button onclick="scrollProjects(true)" id="projectButtonLeft">&lt;</button>
+                <img id="projOpaqLeft" src="images/crestFallen.png">
+                <img id="projectImage" src="images/crestFallen.png">
+                <img id="projOpaqRight" src="images/crestFallen.png">
+                <button onclick="scrollProjects(false)" id="projectButtonRight" onclick="">&gt;</button>
+            </div>
+        <p id="projectsText"></p>
+    </div>
+
+    <div id="workshopDiv">
+        <h2 id="workshopHeader">The Workshop</h1>
+        <h2 id="workshopName"></h1>
+            <div id="galleryContainer">
+                <button id="workshopButtonLeft">&lt;</button>
+                <img id="workshopImage"  src="images/triageSim.png">
+                <button id="workshopButtonRight">&gt;</button>
+            </div>
+        <p id="workshopText"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
